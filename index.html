@@ -298,7 +298,7 @@
         <div id="page1">
             <h1>Will you be my Valentine, Preity? 💕</h1>
             <div class="gif-container">
-                <img id="mainGif" src="https://media.giphy.com/media/MDxuzRvxF39VwnYu9B/giphy.gif" alt="Puppy with begging eyes">
+                <img id="mainGif" src="puppy.gif" alt="Puppy with begging eyes">
             </div>
             <div class="button-container">
                 <button id="yesBtn">Yes ❤️</button>
@@ -420,8 +420,10 @@
             }, 1500);
         }
 
+        const audio = document.getElementById("bgMusic");
         // Yes button click handler
         yesBtn.addEventListener('click', function() {
+            audio.play();
             // Change background
             document.body.classList.add('celebrate');
             
@@ -429,7 +431,7 @@
             createHeartExplosion();
             
             // Change GIF to Happy Valentine's Day celebration
-            mainGif.src = 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWU0NWY3ZjBkNXZpYmtsMHBqNmU5dTJqNjN6YWxlZWNzZWRoZjh6ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/g5zvwUa9720pO/giphy.gif';
+            mainGif.src = 'happyvalentine.gif';
             
             // Hide buttons
             yesBtn.classList.add('hidden');
@@ -479,5 +481,6 @@
             }
         });
     </script>
+    <audio id="bgMusic" src="song.m4a"></audio>
 </body>
 </html>
